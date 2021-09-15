@@ -4,12 +4,13 @@
 
 int main()
 {
+    /*--------------------------------------Day 1----------------------------------*/
+
 
     //1. Convert Upper case to Lower case.
     assert(lower_case('A') == 'a');
     assert(lower_case('b') == 'b');
     assert(lower_case(10) == INVALID);
-    assert(lower_case('29') == INVALID);
 
 
     //2. Calculate the area of circle.
@@ -43,6 +44,21 @@ int main()
     assert(odd_or_even(8) == EVEN);
     assert(odd_or_even(13) == ODD);
 
+    //6. To check whether the given number is leap year or not.
+    assert(is_leap_year(2021) == NOT_LEAP_YEAR);
+    assert(is_leap_year(2020) == LEAP_YEAR);
+    assert(is_leap_year(2000) == LEAP_YEAR);
+    assert(is_leap_year(1900) == NOT_LEAP_YEAR);
+    assert(is_leap_year(-1000) == INVALID);
+
+    //7. Find power of 2^N using left shift operator.
+    assert(power_of_2(2) == 4);
+    assert(power_of_2(4) == 16);
+    assert(power_of_2(10) == 1024);
+    assert(power_of_2(-1) == INVALID); //returns INVALID if number is negative
+
+
+    /*--------------------------------------Day 2----------------------------------*/
 
     return 0;
 }

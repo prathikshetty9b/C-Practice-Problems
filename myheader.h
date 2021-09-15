@@ -2,6 +2,10 @@
 #define INVALID -1
 #define EVEN 2
 #define ODD 1
+#define LEAP_YEAR 4
+#define NOT_LEAP_YEAR 3
+
+/*--------------------------------------Day 1----------------------------------*/
 
 // 1. Upper Case to Lower Case function definition
 char lower_case(char c);
@@ -19,3 +23,11 @@ float celsius_to_fahrenheit(float c);
 
 //5. Function definition for odd or even function
 int odd_or_even(int num);
+
+//6. Function definition for leap year function.
+int is_leap_year(int year);
+
+//7. Function definition for power of 2 using left shift operator
+int power_of_2(int n);
+
+/*--------------------------------------Day 2----------------------------------*/

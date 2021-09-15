@@ -1,7 +1,7 @@
 #include "myheader.h"
 #include<math.h>
 
-//Day 1
+/*--------------------------------------Day 1----------------------------------*/
 
 //1. Function that converts upper case to lower
 
@@ -42,7 +42,7 @@ int circle_area(float radius) //r -> Radius of a Circle
 
 // 3. Functions to calculate simple and compound interest.
 
-// Function to find simple interest.
+    // Function to find simple interest.
 int simple_interest(float principal, float timePeriod, float rateofInterest)
 {
     if(principal >= 0 && timePeriod >= 0 && rateofInterest >=0) //calculate only if numbers are positive
@@ -55,7 +55,7 @@ int simple_interest(float principal, float timePeriod, float rateofInterest)
     }
 }
 
-// Function to find Compound Interest.
+    // Function to find Compound Interest.
 int compound_interest(float principal, float timePeriod, float rateofInterest)
 {
     if(principal >= 0 && timePeriod >= 0 && rateofInterest >=0) //calculate only if numbers are positive
@@ -102,3 +102,44 @@ int odd_or_even(int num) //return 2 if even, 1 if odd.
     }
 }
 
+
+// 6. Check if entered year is leap year or not.
+
+/* Leap year is a year which is perfectly divisible by 400,
+   or year is perfectly divisible by 4 and is not divisible
+   by 100 */
+int is_leap_year(int year) // Return 4 if year is leap year else return 3
+{
+    if (year >= 0 )  // Check if entered year is Valid
+    {
+        /*If the first operand of a logical-OR operation has a nonzero value,
+         the second operand is not evaluated.*/
+        if( (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)) )
+        {
+            return 4;
+        }
+        else
+        {
+            return 3;
+        }
+    }
+    else
+    {
+        return INVALID; // Return INVALID if year is negative.
+    }
+}
+
+// 7. Find power of 2^N using left shift operator.
+int power_of_2(int n)
+{
+    if (n >= 0)
+    {
+        return 1 << n;
+    }
+    else
+    {
+        return INVALID; // Return INVALID if number is negative.
+    }
+}
+
+/*--------------------------------------Day 2----------------------------------*/
