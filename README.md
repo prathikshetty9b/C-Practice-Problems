@@ -2,7 +2,7 @@
 ## Fast Track C - 2021 - 22 | C Practice problems
 
 
-## Instructions
+#### Instructions
 
 - All the functionalities should be implemented using functions.
 - Test the functionality using assertions.
@@ -14,8 +14,9 @@
 - Create a GitHub account and upload all your practice problems under the folder C practice problems.
 - Use MS Teams to discuss the issue with the faculty.
 
+### Day 1 
 <details>
-## <summary> Day 1 </summary>
+<summary> Day 1 Problems </summary>
   
 1. Write a program that converts upper case to lower.
 2. Write a program to calculate the area of circle.
