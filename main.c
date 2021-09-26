@@ -4,6 +4,8 @@
 
 int main()
 {
+    int choice;
+    int units_consumed = 0;
     /*--------------------------------------Day 1----------------------------------*/
 
 
@@ -11,7 +13,7 @@ int main()
     assert(lower_case('A') == 'a');
     assert(lower_case('b') == 'b');
     assert(lower_case(10) == INVALID);
-/*
+
 
     //2. Calculate the area of circle.
     float radius;
@@ -39,7 +41,7 @@ int main()
     printf("Enter Temperature in Celsius : \n");
     scanf("%f", &celsius);
     printf("Fahrenheit : %f\n",celsius_to_fahrenheit(celsius));
-*/
+
     //5. To check whether the given number is odd or even
     assert(odd_or_even(8) == EVEN);
     assert(odd_or_even(13) == ODD);
@@ -88,11 +90,60 @@ int main()
     assert(palindrome_number(-502) == INVALID);
 
     //5. Generate the first 'N' prime numbers
+    printf("\n\n 5. Generate the first 'N' prime numbers.");
     assert(generate_n_prime_numbers(5) == TRUE);
     assert(generate_n_prime_numbers(10) == TRUE);
     assert(generate_n_prime_numbers(0) == INVALID);
     assert (generate_n_prime_numbers(-50) == INVALID);
 
+    //6. Write a C program to display and find the sum of the series 1+11+111+....111 up to n.
+    //   Take the value of 'n' as input from the user*/
+    printf("\n\n 6. Program to display and find the sum of the series 1+11+111+....111 up to n");
+    sum_of_series();
+
+    /*7.A number is called an Armstrong number if the sum of the cubes of the digits of the
+        number is equal to the number. For example 153 = 1^3 + 5^3 + 3^3. Write a C
+        program that asks the user to enter a number and returns if it is Armstrong or not*/
+    printf("\n\n 7. Program that asks the user to enter a number and returns if it is Armstrong or not");
+    is_armstrong();
+
+    //8. Program to check that the input pair of numbers is amicable
+    assert(is_amicable(220,284) == TRUE);
+    assert(is_amicable(284,220) == TRUE);
+    assert(is_amicable(50,600) == FALSE);
+    assert(is_amicable(-10, 20) == INVALID);
+
+    //9. Menu driven program to read two integers & find their sum, difference & product
+    printf("\n\n 9. Menu driven program to read two integers & find their sum, difference & product ");
+    calculator();
+
+    //10.program to calculate the volume of the following shapes: Cube, Cuboid,
+    //   Sphere, Cylinder and Cone. Ask the user which one s/he wants to calculate, and take
+    //   the appropriate required inputs. Then print the result. The input should be taken in the
+    //   main function and calculations for every solid should be done in a separate function
+    //   by passing appropriate arguments.
+    printf("\n\n 10. program to calculate the volume of the following shapes: Cube, Cuboid, Sphere, Cylinder and Cone ");
+    printf("\n Cube                      : 1 ");
+    printf("\n Cuboid                    : 2 ");
+    printf("\n Sphere                    : 3 ");
+    printf("\n Cylinder                  : 4 ");
+    printf("\n Cone                      : 5 ");
+    printf("\n Enter your choice         : ");
+    scanf("%d", &choice);
+    volume_of_shapes(choice);
+
+    //11.. An Electricity board charges the following rates for use of electricity.
+    //For the First 200 units : Rs 1 per unit
+    //For the next 100 units : Rs 1.5 per unit
+    //Beyond 300 units : Rs 2 Per unit.
+    //Write a C Program to read no of unit consumed and print out total charge
+    //amount
+    printf("\n\n 10. Program to read no of unit consumed and print out total charge amount ");
+    printf("\n Units Consumed    : ");
+    scanf("%d",&units_consumed);
+    electricity_bill(units_consumed);
 
     return 0;
+
+
 }
