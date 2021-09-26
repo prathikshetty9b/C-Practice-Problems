@@ -11,7 +11,7 @@ int main()
     assert(lower_case('A') == 'a');
     assert(lower_case('b') == 'b');
     assert(lower_case(10) == INVALID);
-
+/*
 
     //2. Calculate the area of circle.
     float radius;
@@ -39,7 +39,7 @@ int main()
     printf("Enter Temperature in Celsius : \n");
     scanf("%f", &celsius);
     printf("Fahrenheit : %f\n",celsius_to_fahrenheit(celsius));
-
+*/
     //5. To check whether the given number is odd or even
     assert(odd_or_even(8) == EVEN);
     assert(odd_or_even(13) == ODD);
@@ -59,6 +59,40 @@ int main()
 
 
     /*--------------------------------------Day 2----------------------------------*/
+
+    //1. Enter a 5 digit number and find the sum of its digits.
+    assert(sum_of_digits(12345) == 15);
+    assert(sum_of_digits(0) == 0);
+    assert(sum_of_digits(30) == 3);
+    assert(sum_of_digits(-1) == INVALID);
+
+    //2. Write a program to reverse the number.
+    assert(reverse_number(12345) == 54321);
+    assert(reverse_number(0) == 0);
+    assert(reverse_number(5409) == 9045);
+    assert(reverse_number(-50) == INVALID);
+
+    //3. Write a program to count the occurrences of digit in a number
+    assert(occurrence_of_number(11223,2) == 2);
+    assert(occurrence_of_number(11100051,1) == 4);
+    assert(occurrence_of_number(58,7) == 0);
+    assert(occurrence_of_number(0,1) == 0);
+    assert(occurrence_of_number(-32,7) == INVALID);
+
+    //4. WAP to check if a given number is a palindrome
+    assert(palindrome_number(12321) == TRUE);
+    assert(palindrome_number(56788765) == TRUE);
+    assert(palindrome_number(54689) == FALSE);
+    assert(palindrome_number(56788) == FALSE);
+    assert(palindrome_number(0) == TRUE);
+    assert(palindrome_number(-502) == INVALID);
+
+    //5. Generate the first 'N' prime numbers
+    assert(generate_n_prime_numbers(5) == TRUE);
+    assert(generate_n_prime_numbers(10) == TRUE);
+    assert(generate_n_prime_numbers(0) == INVALID);
+    assert (generate_n_prime_numbers(-50) == INVALID);
+
 
     return 0;
 }

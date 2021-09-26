@@ -31,14 +31,22 @@
 	"myheader.h"
 	<math.h>
 
-1631683420 source:d:\my folders\manipal\fast-track-c-programming\c-practice-problems\main.c
+1632661019 source:d:\my folders\manipal\fast-track-c-programming\c-practice-problems\main.c
 	<assert.h>
 	<stdio.h>
 	"myheader.h"
 
-1631683210 d:\my folders\manipal\fast-track-c-programming\c-practice-problems\myheader.h
+1632660312 d:\my folders\manipal\fast-track-c-programming\c-practice-problems\myheader.h
 
 1631683463 source:d:\my folders\manipal\fast-track-c-programming\c-practice-problems\functions.c
+	"myheader.h"
+	<math.h>
+
+1632654947 source:d:\my folders\manipal\fast-track-c-programming\c-practice-problems\day1.c
+	"myheader.h"
+	<math.h>
+
+1632660884 source:d:\my folders\manipal\fast-track-c-programming\c-practice-problems\day2.c
 	"myheader.h"
 	<math.h>
 

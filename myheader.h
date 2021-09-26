@@ -1,9 +1,11 @@
 #define PI 3.14
 #define INVALID -1
 #define EVEN 2
-#define ODD 1
+#define ODD 3
 #define LEAP_YEAR 4
 #define NOT_LEAP_YEAR 3
+#define TRUE 1
+#define FALSE 0
 
 /*--------------------------------------Day 1----------------------------------*/
 
@@ -31,3 +33,18 @@ int is_leap_year(int year);
 int power_of_2(int n);
 
 /*--------------------------------------Day 2----------------------------------*/
+
+// 1. Function definition for sum of digits function.
+int sum_of_digits(int num);
+
+// 2. Function definition for Reverse the Number function.
+int reverse_number(int num);
+
+// 3. Function definition for Occurrence of a Number
+int occurrence_of_number(int num, int digit);
+
+// 4. Function definition for palindrome function
+int palindrome_number(int num);
+// 5. Generate the first 'N' prime numbers.
+int is_prime(int num);
+int generate_n_prime_numbers(int n);
