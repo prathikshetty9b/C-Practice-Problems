@@ -42,3 +42,10 @@ int sphere(int radius);
 int cylinder(int height, int radius);
 int cone(int height, int radius);
 float electricity_bill(int units_consumed);
+
+/*--------------------------------------Day 3----------------------------------*/
+int binary_to_decimal(int binary_number);
+int decimal_to_binary(int decimal_number);
+int generate_sum_of_previous_three_numbers(int sequence_length);
+int generate_pattern(int rows);
+int two_digit_multiple_of_seven();

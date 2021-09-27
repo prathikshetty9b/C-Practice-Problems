@@ -6,10 +6,10 @@ int main()
 {
     int choice;
     int units_consumed = 0;
-    /*--------------------------------------Day 1----------------------------------*/
+ //   /*--------------------------------------Day 1----------------------------------*/
 
 
-    //1. Convert Upper case to Lower case.
+/*    //1. Convert Upper case to Lower case.
     assert(lower_case('A') == 'a');
     assert(lower_case('b') == 'b');
     assert(lower_case(10) == INVALID);
@@ -60,7 +60,7 @@ int main()
     assert(power_of_2(-1) == INVALID); //returns INVALID if number is negative
 
 
-    /*--------------------------------------Day 2----------------------------------*/
+ //   /*--------------------------------------Day 2----------------------------------
 
     //1. Enter a 5 digit number and find the sum of its digits.
     assert(sum_of_digits(12345) == 15);
@@ -97,13 +97,13 @@ int main()
     assert (generate_n_prime_numbers(-50) == INVALID);
 
     //6. Write a C program to display and find the sum of the series 1+11+111+....111 up to n.
-    //   Take the value of 'n' as input from the user*/
+    //   Take the value of 'n' as input from the user
     printf("\n\n 6. Program to display and find the sum of the series 1+11+111+....111 up to n");
     sum_of_series();
 
-    /*7.A number is called an Armstrong number if the sum of the cubes of the digits of the
-        number is equal to the number. For example 153 = 1^3 + 5^3 + 3^3. Write a C
-        program that asks the user to enter a number and returns if it is Armstrong or not*/
+    //7. A number is called an Armstrong number if the sum of the cubes of the digits of the
+    //   number is equal to the number. For example 153 = 1^3 + 5^3 + 3^3. Write a C
+    //   program that asks the user to enter a number and returns if it is Armstrong or not
     printf("\n\n 7. Program that asks the user to enter a number and returns if it is Armstrong or not");
     is_armstrong();
 
@@ -143,7 +143,51 @@ int main()
     scanf("%d",&units_consumed);
     electricity_bill(units_consumed);
 
+ //   /*--------------------------------------Day 3----------------------------------
+ */
+    //1. WAP to convert a binary number to decimal and vice versa.
+
+    // Binary to Decimal
+    assert(binary_to_decimal(101) == 5);
+    assert(binary_to_decimal(1111) == 15);
+    assert(binary_to_decimal(123) == INVALID);
+    assert(binary_to_decimal(-20) == INVALID);
+
+    // Decimal to Binary
+    assert(decimal_to_binary(5) == 101);
+    assert(decimal_to_binary(15) == 1111);
+    assert(decimal_to_binary(0) == 0);
+    assert(decimal_to_binary(-52) == INVALID);
+
+    //2. Generate a sequence of numbers such that every number in the sequence is the sum of
+    //   the previous three numbers. The first three numbers are 0,0,1.
+
+    printf("\n\n 2. Generate a sequence of numbers such that every number in the sequence is the\n    sum of the previous three numbers\n");
+    assert(generate_sum_of_previous_three_numbers(9) == 1);
+    assert(generate_sum_of_previous_three_numbers(3) == 1);
+    assert(generate_sum_of_previous_three_numbers(0) == INVALID);
+
+    //3. WAP to print the following sketch by taking in N as number of rows
+
+    printf("\n\n 3. WAP to print the following sketch by taking in N as number of rows\n\n");
+    assert(generate_pattern(7) == 1);
+    assert(generate_pattern(-1) == INVALID);
+
+
+    //4. Write a C program, which will print two digit numbers whose sum of both digit is
+    //   multiple of seven. e.g. 16,25,34......
+
+    printf("\n\n 4. Write a C program, which will print two digit numbers whose sum of both digit \n    is multiple of seven. e.g. 16,25,34......\n\n");
+    assert(two_digit_multiple_of_seven() == 1);
+
+
+
+
+
+
+
+
+
+
     return 0;
-
-
 }

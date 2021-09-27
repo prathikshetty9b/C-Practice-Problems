@@ -31,13 +31,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="functions.c">
+		<Unit filename="day1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="day2.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="my_header.h" />
 		<Unit filename="myheader.h" />
 		<Extensions />
 	</Project>
