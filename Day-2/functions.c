@@ -1,4 +1,4 @@
-#include "myheader.h"
+#include "header.h"
 #include <math.h>
 #include <stdio.h>
 
@@ -23,7 +23,7 @@ int sum_of_digits(int num)
     }
     else
     {
-        return INVALID;
+        return -1;
     }
 
 }
@@ -76,7 +76,7 @@ int occurrence_of_number(int num, int digit) // Input the number and digit whose
    }
    else
    {
-       return INVALID;
+       return -1;
    }
 }
 
@@ -92,7 +92,7 @@ int palindrome_number(int num) //return 1 if true, 0 if false.
     }
     else
     {
-        return INVALID;
+        return -1;
     }
 
 }
@@ -125,7 +125,7 @@ int generate_n_prime_numbers(int n)
     {
         int count = 0;
         int num = 2;
-        printf("\n Generate %d Prime Numbers: ", n);
+        printf("\n\tGenerate %d Prime Numbers: ", n);
         while(count < n)
         {
             // Print the number if number is prime and increment the count
@@ -136,6 +136,7 @@ int generate_n_prime_numbers(int n)
             }
             num++;
         }
+        printf("\n");
         return 1;
     }
     else
@@ -149,7 +150,7 @@ int sum_of_series()
 {
     int n;
     // Initialize series and series sum to zero
-    printf("\n Enter the value of n : ");
+    printf("\n\tEnter the value of n : ");
     scanf("%d", &n);
     if(n > 0)
     {
@@ -165,7 +166,7 @@ int sum_of_series()
             // Summing up generated elements
             series_sum = series_sum + series;
         }
-        printf("\n Series Sum : %d", series_sum);
+        printf("\n\tSum of the Series    : %d", series_sum);
         return 1;
     }
     else
@@ -178,7 +179,7 @@ int sum_of_series()
 int is_armstrong()
 {
     int num;
-    printf("\n Enter a number to check if the number is Armstrong or not : ");
+    printf("\n\tEnter a number to check if the number is Armstrong or not : ");
     scanf("%d", &num);
     int sum = 0;
     int armstrong = num;
@@ -191,10 +192,10 @@ int is_armstrong()
         }
         if( sum == armstrong)
         {
-            printf("\n %d is an Armstrong Number\n",armstrong);
+            printf("\n\t%d is an Armstrong Number\n",armstrong);
             return 1;
         }
-        printf("\n %d is not an Armstrong Number\n",armstrong);
+        printf("\n\t%d is not an Armstrong Number\n",armstrong);
         return 0;
     }
     else
@@ -246,26 +247,26 @@ int calculator()
 {
     int num1,num2,s;
     //number 1
-    printf("\n Enter number 1 : ");
+    printf("\n\tEnter number 1                 : ");
     scanf("%d",&num1);
 
     //number 2
-    printf("\n Enter number 2 : ");
+    printf("\n\tEnter number 2                 : ");
     scanf("%d",&num2);
 
     //Ask which operation to perform from the user
-    printf("\n To find the Sum click          : 1 ");
-    printf("\n To find the Difference click   : 2 ");
-    printf("\n To find the Product click      : 3 ");
-    printf("\n Enter your Choice              : ");
+    printf("\n\tTo find the Sum click          : 1 ");
+    printf("\n\tTo find the Difference click   : 2 ");
+    printf("\n\tTo find the Product click      : 3 ");
+    printf("\n\tEnter your Choice              : ");
     scanf("%d",&s);
     switch(s)
         {
-            case 1: printf("\n Sum = %d",num1+num2);
+            case 1: printf("\n\tSum                            : %d",num1+num2);
                     break;
-            case 2: printf("\n Difference = %d",num1-num2);
+            case 2: printf("\n\tDifference                     : %d",num1-num2);
                     break;
-            case 3: printf("\n Product = %d",num1*num2);
+            case 3: printf("\n\tProduct                        : %d",num1*num2);
                     break;
             default:printf("\nInvalid Choice\n");
                     return -1;
@@ -285,43 +286,43 @@ int volume_of_shapes(int choice)
     {
 
         case 1 :
-                printf("\n Enter the edge length of the cube : ");
+                printf("\n\tEnter the edge length of the cube : ");
                 scanf("%d", &cube_length);
-                printf("\n Volume of the Cube                : %d", cube(cube_length));
+                printf("\n\tVolume of the Cube                : %d", cube(cube_length));
                 break;
         case 2 :
 
-                printf("\n Enter the height of the cuboid    : ");
+                printf("\n\tEnter the height of the cuboid    : ");
                 scanf("%d", &height);
-                printf("\n Enter the length of the cuboid    : ");
+                printf("\n\tEnter the length of the cuboid    : ");
                 scanf("%d", &length);
-                printf("\n Enter the width of the cuboid     : ");
+                printf("\n\tEnter the width of the cuboid     : ");
                 scanf("%d", &width);
-                printf("\n Volume of the Cuboid              : %d", cuboid(height,length,width));
+                printf("\n\tVolume of the Cuboid              : %d", cuboid(height,length,width));
                 break;
         case 3 :
 
-                printf("\n Enter the radius of the sphere    : ");
+                printf("\n\tEnter the radius of the sphere    : ");
                 scanf("%d", &radius);
-                printf("\n Volume of the Sphere              : %d", sphere(radius));
+                printf("\n\tVolume of the Sphere              : %d", sphere(radius));
                 break;
         case 4 :
 
-                printf("\n Enter the height of the cylinder  : ");
+                printf("\n\tEnter the height of the cylinder  : ");
                 scanf("%d", &c_height);
-                printf("\n Enter the radius of the cylinder  : ");
+                printf("\n\tEnter the radius of the cylinder  : ");
                 scanf("%d", &c_radius);
-                printf("\n Volume of the Cylinder            : %d", cylinder(c_height,c_radius));
+                printf("\n\tVolume of the Cylinder            : %d", cylinder(c_height,c_radius));
                 break;
         case 5 :
-                printf("\n Enter the height of the Cone      : ");
+                printf("\n\tEnter the height of the Cone      : ");
                 scanf("%d", &cone_height);
-                printf("\n Enter the radius of the cone      : ");
+                printf("\n\tEnter the radius of the cone      : ");
                 scanf("%d", &cone_radius);
-                printf("\n Volume of the Cone                : %d", cone(cone_height,cone_radius));
+                printf("\n\tVolume of the Cone                : %d", cone(cone_height,cone_radius));
                 break;
         default:
-                printf("\nInvalid Choice\n");
+                printf("\n\tInvalid Choice\n");
                 return -1;
 
     }
@@ -372,10 +373,10 @@ float electricity_bill(int units_consumed)
     }
     else
     {
-        printf("\n Enter number greater than 0 \n");
+        printf("\n\tEnter number greater than 0 \n");
         return -1;
     }
-    printf("\n Total Charges    : %f",total_charges);
+    printf("\n\tTotal Charges                     : %f\n",total_charges);
     return total_charges;
 }
 

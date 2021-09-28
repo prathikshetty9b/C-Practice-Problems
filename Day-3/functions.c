@@ -1,4 +1,4 @@
-#include "myheader.h"
+#include "header.h"
 #include <math.h>
 #include <stdio.h>
 
@@ -160,4 +160,53 @@ int two_digit_multiple_of_seven()
     printf("\n");
     return 1;
 }
+
+// 5. Write a recursive function for calculating power of a number. Take base number and exponent from user.
+
+int power_using_recursion(int base,int exponent)
+{
+    if(base >= 0 && exponent >= 0 )
+    {
+        // Base Case
+        if(exponent == 0)
+        {
+            return 1;
+        }
+        // Recursive Statement
+        else
+        {
+            return base * power_using_recursion(base,exponent-1);
+
+        }
+    }
+    else
+    {
+        return -1; // Return -1 for invalid inputs
+    }
+}
+
+// 6. Write a recursive function for calculating factorial of a number.
+
+int factorial_of_number_using_recursion(int number)
+{
+    if(number >= 0 )
+    {
+        // Base Case
+        if(number == 0)
+        {
+            return 1;
+        }
+        // Recursive Statement
+        else
+        {
+            return number * factorial_of_number_using_recursion(number - 1);
+
+        }
+    }
+    else
+    {
+        return -1; // Return -1 for invalid inputs
+    }
+}
+
 
