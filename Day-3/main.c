@@ -54,6 +54,8 @@ int main()
     printf("\n\tEnter Exponent                           : ");
     scanf("%d", &exponent);
     printf("\n\tPower                                    : %d", power_using_recursion(base,exponent));
+    assert(power_using_recursion(10,2) == 100);
+    assert(power_using_recursion(-2,5) == INVALID);
 
 
     //6. Write a recursive function for calculating factorial of a number.
@@ -64,7 +66,26 @@ int main()
     assert(factorial_of_number_using_recursion(0) == 1);
     assert(factorial_of_number_using_recursion(-10) == INVALID);
 
+    //7. Use recursive calls to evaluate F(x) = x + x3/3! + x5/5! + x7/7!+ …
+    printf("\n\n 7. Use recursive calls to evaluate F(x) = x + x3/3! + x5/5! + x7/7!+ …\n");
 
+
+    //8. Concatenate two integer values using macros
+    printf("\n\n 8. Concatenate two integer values using macros\n");
+    printf("\n\tNote : Tested using Assertion.\n");
+    assert(CONCATENATE_INTEGER(10,13) == 1013);
+    assert(CONCATENATE_INTEGER(20,19) == 2019);
+
+    //9. Find square of a number using macros.
+    printf("\n\n 9. Find square of a number using macros.\n");
+    printf("\n\tNote : Tested using Assertion.\n");
+    assert(SQUARE_USING_MACRO(5) == 25);
+    assert(SQUARE_USING_MACRO(7) == 49);
+
+    //10. Write a menu driven program to display the mathematical functions like square root, natural log, log10x, power(x,n), Cos(x). (use math.h)
+    printf("\n\n 10. Write a menu driven program to display the mathematical functions like square root, natural log, log10x, power(x,n), Cos(x). (use math.h)\n");
+    assert(mathematical_functions() == 1);
+    assert(mathematical_functions() == 1);
 
     return 0;
 }

@@ -209,4 +209,81 @@ int factorial_of_number_using_recursion(int number)
     }
 }
 
+//7. Use recursive calls to evaluate F(x) = x + x3/3! + x5/5! + x7/7!+ …
 
+int evaluate_function_using_recursion(int x)
+{
+    if(x >= 0)
+    {
+        //Base Casw
+    }
+    return 0;
+}
+
+//8. Concatenate two integer values using macros
+//Macro function defined in header file
+
+//9. Find square of a number using macros
+//Macro function defined in header file
+
+//10. Write a menu driven program to display the mathematical functions like square root, natural log, log10x, power(x,n), Cos(x). (use math.h)
+int mathematical_functions()
+{
+    double base,exponent;
+    double cos_x,sqrt_x,nlog_x,log_x;
+    int choice;
+
+    //Display to the user
+    printf("\n\tMathematical Functions\n");
+    printf("\n\tSelect 1 to find square root(x) ");
+    printf("\n\tSelect 2 to find natural log(x) ");
+    printf("\n\tSelect 3 to find log10(x)       ");
+    printf("\n\tSelect 4 to find power(x,n)     ");
+    printf("\n\tSelect 5 to find cos(x)         ");
+    printf("\n\tEnter your choice          : ");
+    scanf("%d",&choice);
+
+    //switch implementation
+    switch(choice)
+    {
+    case 1: printf("\n\tSquareRoot(x) ");
+            printf("\n\tEnter value of x           : ");
+            scanf("%lf",&sqrt_x);
+            printf("\n\tSquare Root of %lf  = %lf",sqrt_x,sqrt(sqrt_x));
+            printf("\n");
+            return 1;
+            break;
+    case 2: printf("\n\tNatural Log ");
+            printf("\n\tEnter value of x           : ");
+            scanf("%lf",&nlog_x);
+            printf("\n\tNatural log of %lf  = %lf",nlog_x,log(nlog_x));
+            return 1;
+            break;
+    case 3: printf("\n\tlog10(x) ");
+            printf("\n\tEnter value of x           : ");
+            scanf("%lf",&log_x);
+            printf("\n\tlog10 of %lf  = %lf",log_x,log10(log_x));
+            printf("\n");
+            return 1;
+            break;
+    case 4: printf("\n\tpower(base,exponent)");
+            printf("\n\tEnter base number          : ");
+            scanf("%lf",&base);
+            printf("\n\tEnter exponent             : ");
+            scanf("%lf",&exponent);
+            printf("\n\t%lf to the power %lf = %lf",base,exponent,pow(base,exponent));
+            printf("\n");
+            return 1;
+            break;
+    case 5: printf("\n\tCos(x)");
+            printf("\n\tEnter value of x           : ");
+            scanf("%lf",&cos_x);
+            printf("\n\tcos(%lf) = %lf",cos_x,cos(cos_x));
+            printf("\n");
+            return 1;
+            break;
+    default:printf("\n\\tEnter valid choice \n");
+            return -1;
+
+    }
+}
