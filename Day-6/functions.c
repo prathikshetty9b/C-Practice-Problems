@@ -1,0 +1,231 @@
+#include "header.h"
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
+//1. Write a program to store and print the roll no., name, age and marks of 10 students using structures.
+
+//4. Implement two player snake and ladder game with board size 10x10. Use 6 ladder and
+//   7 snakes in the game. Use random function to roll the dice. After every move show
+//   the board to the user. Player who reaches 100 shall win the race. Note: Player1: user
+//   and Player2: computer
+
+//Algorithm
+//Welcome Message
+//Display Board
+//Player 1 Roll
+//Update Position
+//Check for snake or ladder
+//New position
+//computer
+//Automatic dice roll
+//Update Position
+//Winner Pos = 100
+
+int snake_and_ladder_game(){
+
+    printf("\t                    Welcome to Snake and Ladder Game                                 \n");
+    //Add Instructions
+    char start;
+    //Display Board to the player
+    display_board();
+
+    printf("\t Press Enter to start playing\n");
+    scanf("%c",&start);
+
+    if(start == '\n')
+    {
+        game_logic();
+
+    }
+
+
+return 1;
+
+}
+
+int display_board()
+{
+    printf("\n");
+    printf("\t ------------------ BOARD ---------------                                            \n");
+    printf("\t| 100  99  98  97  96  95  94  93  92  91  |    ----------------------------------   \n");
+    printf("\t|  81  82  83  84  85  86  87  88  89  90  |   |         Snake and Ladder         |  \n");
+    printf("\t|  80  79  78  77  76  75  74  73  72  71  |   | Snake 99 to 49   Ladder 61 to 95 |  \n");
+    printf("\t|  61  62  63  64  65  66  67  68  69  70  |   | Snake 85 to 52   Ladder 70 to 92 |  \n");
+    printf("\t|  60  59  58  57  56  55  54  53  52  51  |   | Snake 72 to 60   Ladder 24 to 65 |  \n");
+    printf("\t|  41  42  43  44  45  46  47  48  49  50  |   | Snake 55 to 32   Ladder 21 to 66 |  \n");
+    printf("\t|  40  39  38  37  36  35  34  33  32  31  |   | Snake 40 to 20   Ladder 07 to 28 |  \n");
+    printf("\t|  21  22  23  24  25  26  27  28  29  30  |   | Snake 15 to 02   Ladder 04 to 46 |  \n");
+    printf("\t|  20  19  18  17  16  15  14  13  12  11  |   | Snake 17 to 10                   |  \n");
+    printf("\t|  01  02  03  04  05  06  07  08  09  10  |    ----------------------------------   \n");
+    printf("\t ------------------------------------------                                          \n");
+    printf("\n");
+    return 1;
+}
+
+int roll_dice()
+{
+    int dice;
+    // Use current time as seed for random generator
+    srand(time(0));
+    // Random Number 1 - 6
+    dice = rand()%6 + 1;
+    return dice;
+}
+
+
+int check_snake(int pos) //Return new position if player got bitten by snake else return 0
+{
+    if(pos == 99)
+        return 49;
+    else if(pos == 85)
+        return 52;
+    else if(pos == 72)
+        return 60;
+    else if (pos == 55)
+        return 32;
+    else if (pos == 40)
+        return 20;
+    else if (pos == 15)
+        return 2;
+    else if(pos == 17)
+        return 10;
+    else
+        return 0;
+
+}
+int check_ladder(int pos) //Return new position if player got ladder to climb else return 0
+{
+    if(pos == 61)
+        return 95;
+    else if(pos == 70)
+        return 92;
+    else if(pos == 24)
+        return 65;
+    else if (pos == 21)
+        return 66;
+    else if (pos == 07)
+        return 28;
+    else if (pos == 04)
+        return 46;
+    else
+        return 0;
+
+}
+
+
+
+int game_logic()
+{
+    int game = 1;
+    char press;
+    int dice;
+    int player_pos = 0;
+    int computer_pos = 0;
+    int flag = 1;
+    while (game)
+    {
+        //Your Turn
+        if(flag == 1)
+        {
+            printf("\t------------------------------  Your Turn -------------------------\n\n");
+            printf("\tCurrent Position : %d\n\n",player_pos);
+            printf("\tPress Enter to Roll the Dice, Press 'Q' to quit the game\n");
+            press = getchar();
+
+            //Roll the Dice
+            if(press == '\n')
+            {
+                dice = roll_dice();
+                printf("\tYou Rolled : %d\n\n",dice);
+            }
+            else if(press == 'Q' || press == 'q')
+                break;
+
+            //Check if player reached 100
+            if(player_pos + dice == 100)
+            {
+                printf("\tNew Position : %d\n\n",player_pos);
+                printf("\t*************************************************************************************\n");
+                printf("\t********************Congratulations You Won The Game!!*******************************\n");
+                printf("\t*************************************************************************************\n");
+                 //Stop Game
+                break;
+            }
+            //If position greater than 100 leave the position  untouched
+            else if(player_pos + dice > 100)
+            {
+                printf("\tYou need %d to win the game\n", 100-player_pos);
+            }
+            //Check for ladder and snakes
+            else
+            {
+                player_pos = player_pos + dice;
+                if (check_snake(player_pos) != 0)
+                {
+                    printf("\tToo Bad! You got bitten by a snake at %d \n\n",player_pos);
+                    player_pos = check_snake(player_pos);
+                }
+                if (check_ladder(player_pos) != 0)
+                {
+                    printf("\tYay!! You got a ladder at %d \n\n",player_pos);
+                    player_pos = check_ladder(player_pos);
+                }
+            }
+            printf("\tNew Position : %d\n\n",player_pos);
+            flag = 0;//Computers turn
+
+        }
+        //Computers Turn
+        else if(flag == 0)
+        {
+
+            printf("\t---------------------------- Computers Turn -----------------------\n\n");
+            printf("\tCurrent Position : %d\n\n",computer_pos);
+
+            // Random Number 1 - 6
+            dice = rand()%6 + 1;
+            printf("\tComputer Rolled : %d\n\n",dice);
+
+
+            //Check if computer reached 100
+            if(computer_pos + dice == 100)
+            {
+                printf("\tNew Position : %d\n\n",computer_pos+dice);
+                printf("\t*************************************************************************************\n");
+                printf("\t****************************  Sorry! You Lost  **************************************\n");
+                printf("\t*************************************************************************************\n");
+                 //Stop Game
+                break;
+            }
+            //If position greater than 100 leave the position  untouched
+            else if(computer_pos + dice > 100)
+            {
+                printf("\tComputer needs %d to win the game\n\n", 100-computer_pos);
+            }
+            //Check for ladder and snakes
+            else
+            {
+                computer_pos = computer_pos + dice;
+                if (check_snake(computer_pos) != 0)
+                {
+                    printf("\tComputer got bitten by a snake at %d \n\n",computer_pos);
+                    computer_pos = check_snake(computer_pos);
+                }
+                if (check_ladder(computer_pos) != 0)
+                {
+                    printf("\tComputer got a ladder at %d \n\n",computer_pos);
+                    computer_pos = check_ladder(computer_pos);
+                }
+            }
+            printf("\tNew Position : %d\n\n",computer_pos);
+            flag =1; //Players turn
+            display_board();
+        }
+
+
+    }
+    return 1;
+}
+
