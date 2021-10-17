@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1634485997 source:d:\my folders\manipal\fast-track-c-programming\c-practice-problems\day-4-5\functions.c
+	"header.h"
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1634483352 d:\my folders\manipal\fast-track-c-programming\c-practice-problems\day-4-5\header.h
+
+1634486045 source:d:\my folders\manipal\fast-track-c-programming\c-practice-problems\day-4-5\main.c
+	<assert.h>
+	<stdio.h>
+	<string.h>
+	"header.h"
+
