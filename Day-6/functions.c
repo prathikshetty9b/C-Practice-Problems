@@ -5,6 +5,64 @@
 #include <stdio.h>
 
 //1. Write a program to store and print the roll no., name, age and marks of 10 students using structures.
+int student_info(int n) //n-> Number of students
+{
+
+    Student student[n];
+
+    //Input from user
+     printf("\n");
+    for(int i=0; i <n ; i++)
+    {
+        printf("\tEnter Student %d Roll No :  ",i+1);
+        scanf("%d",&student[i].roll_no);
+        printf("\tEnter Student %d Name    :  ",i+1);
+        scanf("%s",&student[i].name);
+        printf("\tEnter Student %d Age     :  ",i+1);
+        scanf("%d",&student[i].age);
+        printf("\tEnter Student %d Marks   :  ",i+1);
+        scanf("%d",&student[i].marks);
+        printf("\n");
+    }
+
+    //Print Student info
+    printf("\n\tRoll Number\t\tName\t\tAge\t\tMarks\n");
+     for(int i=0; i <n ; i++)
+    {
+        printf("\t%d\t\t%s\t\t%d\t\t%d",student[i].roll_no,student[i].name,student[i].age,student[i].marks);
+    }
+    printf("\n");
+
+    return 1;
+
+
+}
+
+//2. Write a program to add, subtract and multiply two complex numbers using structures.
+Complex complex_arithmatic(Complex c1, Complex c2, int choice)
+{
+    Complex result,invalid;
+    switch(choice)
+    {
+        //sum
+        case 1: result.real = c1.real + c2.real;
+                result.imag = c1.imag + c2.imag;
+                return result;
+        //Difference
+        case 2: result.real = c1.real - c2.real;
+                result.imag = c1.imag - c2.imag;
+                return result;
+        //Product
+        case 3: result.real = c1.real * c2.real;
+                result.imag = c1.imag * c2.imag;
+                return result;
+        default:invalid.real = -1;
+                invalid.imag = -1;
+                return invalid;
+    }
+
+}
+
 
 //4. Implement two player snake and ladder game with board size 10x10. Use 6 ladder and
 //   7 snakes in the game. Use random function to roll the dice. After every move show
