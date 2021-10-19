@@ -175,23 +175,23 @@ and Player2: computer.
 
 1. WAP to store N integer values in an array (use malloc). Perform the following 
 operations:
-i. Search an element using linear search
-ii. Find maximum and minimum value
-iii. Find the sum of all the elements of array
-iv. Find the sum of even and odd elements of array
-v. Check whether the array in palindrome
-vi. Write a function to deallocate the memory using free()
+i. Search an element using linear search  
+ii. Find maximum and minimum value  
+iii. Find the sum of all the elements of array  
+iv. Find the sum of even and odd elements of array  
+v. Check whether the array in palindrome  
+vi. Write a function to deallocate the memory using free()  
 
 ### DAY 8
 
 1. Write a program to store roll no., name, age and marks of N students dynamically.
-Perform the following operations
-i. Search student by roll no.
-ii. Search student by name
-iii. Return student details who have scored highest marks. (Assume only one 
+Perform the following operations  
+i. Search student by roll no.    
+ii. Search student by name  
+iii. Return student details who have scored highest marks. (Assume only one   
 student has scored highest marks)
-iv. Display the details of the students whose name begins with ‘A’.
-v. Deallocate all the memory before exiting the program
+iv. Display the details of the students whose name begins with ‘A’.    
+v. Deallocate all the memory before exiting the program   
 2. In an X-Y Plane there are N numbers of points at location (x,y). Each point has a 
 weight associated with it. Define the structure for the above problem. Find the point 
 with maximum weight. Assuming all points are connected, count the number of 
